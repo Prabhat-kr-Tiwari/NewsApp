@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.AdsFragment"
+    android:background="@color/white">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+   <com.google.android.material.card.MaterialCardView
+       android:id="@+id/search_bar"
+       android:layout_width="match_parent"
+       android:layout_height="36dp"
+       app:cardCornerRadius="6dp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+      android:layout_marginStart="20dp"
+       android:layout_marginEnd="20dp"
+       android:layout_marginTop="20dp"
+       app:cardBackgroundColor="@color/gray200"
+
+       >
+       <androidx.appcompat.widget.AppCompatEditText
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:padding="0dp"
+           android:hint="Search"
+           android:paddingStart="16dp"
+           android:drawableEnd="@drawable/baseline_search_gray"
+           android:paddingEnd="16dp"
+           android:background="@null"
+           />
+
+   </com.google.android.material.card.MaterialCardView>
+    <TextView
+        android:id="@+id/txt_popular_tags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popular Tags"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_bar"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_view_all_popular_tags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View All"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/search_bar"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toEndOf="@id/search_bar"
+
+        />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/popular_tags_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_popular_tags"
+
+
+        >
+       <com.google.android.material.card.MaterialCardView
+           android:layout_width="wrap_content"
+           android:layout_height="26dp"
+           android:layout_marginTop="10dp"
+           app:cardCornerRadius="6dp"
+           android:layout_weight="1"
+
+           app:cardBackgroundColor="@color/gray200"
+
+
+           >
+
+           <TextView
+               android:layout_gravity="center"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="#FridayMorning"
+               android:textStyle="bold"
+
+               android:textSize="13sp"
+               android:alpha="0.6"
+               android:textColor="@color/gray800"
+               />
+       </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="6dp"
+            android:layout_weight="1"
+            android:layout_marginStart="14dp"
+
+            app:cardBackgroundColor="@color/gray200"
+
+
+            >
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#CollegeColorsDay"
+                android:textStyle="bold"
+
+                android:textSize="13sp"
+                android:alpha="0.6"
+                android:textColor="@color/gray800"
+                />
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="6dp"
+            android:layout_weight="1"
+
+            app:cardBackgroundColor="@color/gray200"
+
+
+            >
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#instagramDown"
+                android:textStyle="bold"
+
+                android:textSize="13sp"
+                android:alpha="0.6"
+                android:textColor="@color/gray800"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/popular_tags_ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:weightSum="3"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/popular_tags_ll"
+
+
+        >
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="26dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="6dp"
+
+            app:cardBackgroundColor="@color/gray200"
+
+
+            >
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#FridayFeeling"
+                android:textStyle="bold"
+
+                android:textSize="13sp"
+                android:alpha="0.6"
+                android:textColor="@color/gray800"
+                />
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="6dp"
+            android:layout_weight="1"
+            android:layout_marginStart="14dp"
+
+            app:cardBackgroundColor="@color/gray200"
+
+
+            >
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#ThursdayVibes"
+                android:textStyle="bold"
+
+                android:textSize="13sp"
+                android:alpha="0.6"
+                android:textColor="@color/gray800"
+                />
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="6dp"
+            android:layout_weight="1"
+
+            app:cardBackgroundColor="@color/gray200"
+
+
+            >
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#DigitalCurrency"
+                android:textStyle="bold"
+
+                android:textSize="13sp"
+                android:alpha="0.6"
+                android:textColor="@color/gray800"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/popular_tags_ll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/popular_tags_ll2"
+
+
+        >
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_weight=".1"
+            android:layout_height="26dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="6dp"
+
+            app:cardBackgroundColor="@color/gray200"
+
+
+            >
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#Bitcoin"
+                android:textStyle="bold"
+
+                android:textSize="13sp"
+                android:alpha="0.6"
+                android:textColor="@color/gray800"
+                />
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_weight=".1"
+            android:layout_height="26dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="6dp"
+            android:layout_marginStart="14dp"
+
+            app:cardBackgroundColor="@color/gray200"
+
+
+            >
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#Cryptocurrency"
+                android:textStyle="bold"
+
+                android:textSize="13sp"
+                android:alpha="0.6"
+                android:textColor="@color/gray800"
+                />
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_weight=".1"
+            android:layout_height="26dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="6dp"
+
+            app:cardBackgroundColor="@color/gray200"
+            >
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#knifeTalk"
+                android:textStyle="bold"
+
+                android:textSize="13sp"
+                android:alpha="0.6"
+                android:textColor="@color/gray800"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/popular_tags_ll4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:weightSum="5"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/popular_tags_ll3"
+
+
+        >
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="6dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/gray200"
+
+
+            >
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#Tesla"
+                android:textStyle="bold"
+
+                android:textSize="13sp"
+                android:alpha="0.6"
+                android:textColor="@color/gray800"
+                />
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="55dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="6dp"
+            android:layout_weight="1"
+            android:layout_marginStart="14dp"
+
+            app:cardBackgroundColor="@color/gray200"
+
+
+            >
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#India"
+                android:textStyle="bold"
+
+                android:textSize="13sp"
+                android:alpha="0.6"
+                android:textColor="@color/gray800"
+                />
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="64dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="6dp"
+
+            app:cardBackgroundColor="@color/gray200"
+            >
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#Climate"
+                android:textStyle="bold"
+
+                android:textSize="13sp"
+                android:alpha="0.6"
+                android:textColor="@color/gray800"
+                />
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="64dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="6dp"
+
+            app:cardBackgroundColor="@color/gray200"
+            >
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#Russia"
+                android:textStyle="bold"
+
+                android:textSize="13sp"
+                android:alpha="0.6"
+                android:textColor="@color/gray800"
+                />
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="64dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="6dp"
+
+            app:cardBackgroundColor="@color/gray200"
+            >
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#japan"
+                android:textStyle="bold"
+
+                android:textSize="13sp"
+                android:alpha="0.6"
+                android:textColor="@color/gray800"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:background="@color/gray400"
+        app:layout_constraintTop_toBottomOf="@id/popular_tags_ll4"
+        />
+    <TextView
+        android:id="@+id/txt_latest_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Latest News"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View All"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        android:layout_marginTop="12dp"
+       app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_latest_news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_latest_news"
+        android:layout_marginTop="0dp"
+        />
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:background="@color/gray400"
+        app:layout_constraintTop_toBottomOf="@id/rv_latest_news"
+        />
+    <TextView
+        android:id="@+id/txt_recommended_topic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recomendation Topic"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view2"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View All"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/view2"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_recomendation_topic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_recommended_topic"
+        android:layout_marginTop="5dp"
+        tools:listitem="@layout/recomendation_topic_item"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

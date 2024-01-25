@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.DetailNewsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <ImageButton
+                    android:id="@+id/back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:src="@drawable/baseline_arrow_back_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/bookmark_checkbox"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:button="@drawable/selector_bookmark_item"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/share_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:src="@drawable/box_arrow_up"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:background="@drawable/gray_gradient"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@id/back_btn" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/image1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/news_headline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Monarch population soars 4,900 percent since last year in thrilling 2021 wetern migration"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/image" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/publisher_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/phoy"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/news_headline"
+                    app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="26dp"
+                    android:text="By"
+                    android:textColor="@color/gray800"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toEndOf="@id/publisher_image"
+                    app:layout_constraintTop_toBottomOf="@id/news_headline" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/author_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="26dp"
+                    android:text="Andy Corbley"
+                    android:textColor="@color/gray800"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toEndOf="@id/txt_by"
+                    app:layout_constraintTop_toBottomOf="@id/news_headline" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginEnd="50dp"
+                    android:text="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/news_headline" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_hr_ago"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="hr ago"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/news_headline" />
+
+                <ImageButton
+                    android:id="@+id/comments_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white"
+                    android:src="@drawable/chat_left"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/publisher_image" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/comments_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:text="8"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/comments_button"
+                    app:layout_constraintTop_toBottomOf="@id/txt_by" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/comments_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Comments"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/comments_count"
+                    app:layout_constraintTop_toBottomOf="@id/txt_by" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/liked_checkbox"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="30dp"
+                    android:button="@drawable/selector_like_item"
+                    app:layout_constraintStart_toEndOf="@id/comments_txt"
+                    app:layout_constraintTop_toBottomOf="@id/txt_by"
+
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/likes_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="30dp"
+                    android:text="34"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/liked_checkbox"
+                    app:layout_constraintTop_toBottomOf="@id/txt_by" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/likes_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Likes"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/likes_count"
+                    app:layout_constraintTop_toBottomOf="@id/txt_by" />
+
+                <ImageButton
+                    android:id="@+id/share_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="34dp"
+                    android:background="@color/white"
+                    android:src="@drawable/share"
+                    app:layout_constraintStart_toEndOf="@id/likes_txt"
+                    app:layout_constraintTop_toBottomOf="@id/txt_by" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/share_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Share"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/share_button"
+                    app:layout_constraintTop_toBottomOf="@id/txt_by" />
+
+                <TextView
+                    android:id="@+id/news_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Stellantis CEO Carlos Tavares has warned that an EV “bloodbath” is coming if automakers follow Tesla and Elon Musk in a “race to the bottom.” The Stellantis CEO’s comments came amidst Ford’s announcement that it was scaling back production and trimming it
+           Stellantis CEO Carlos Tavares has warned that an EV “bloodbath” is coming if automakers follow Tesla and Elon Musk in a “race to the bottom.” The Stellantis CEO’s comments came amidst Ford’s announcement that it was scaling back production and trimming itStellantis CEO Carlos Tavares has warned that an EV “bloodbath” is coming if automakers follow Tesla and Elon Musk in a “race to the bottom.” The Stellantis CEO’s comments came amidst Ford’s announcement that it was scaling back production and trimming itStellantis CEO Carlos Tavares has warned that an EV “bloodbath” is coming if automakers follow Tesla and Elon Musk in a “race to the bottom.” The Stellantis CEO’s comments came amidst Ford’s announcement that it was scaling back production and trimming it"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/comments_button" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

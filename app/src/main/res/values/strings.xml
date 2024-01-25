@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="hint_username"><font size="32">Username</font></string>
+    <string name="hint_email"><font size="32">email</font></string>
+    <string name="hint_phone"><font size="32">phone</font></string>
+    <string name="hint_password"><font size="32">password</font></string>
+    <string name="enter_your_email"><font size="32">Enter Your Email</font></string>
+    <string name="verification_code"><font size="32">Verification Code</font></string>
+    <string name="email_helper_text"><font size="10">Please check your mail, and enter the verification code</font></string>
+    <string name="email_valid_input"><font size="10">Please enter your valid otp</font></string>
+    <string name="nav_open">Open Navigation Drawer</string>
+    <string name="nav_close">Close Navigation Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_heading"><font size="30">Add Heading</font></string>
+    <string name="add_Tag"><font size="30">Add Tag</font></string>
+    <string name="category"><font size="30">Category</font></string>
+    <string name="add_video_link"><font size="30">Add Video Link</font></string>
+    <string name="username"><font size="32" color="#7C7878">Username</font></string>
+    <string name="email"><font size="32" color="#7C7878">Email</font></string>
+    <string name="phone"><font size="32" color="#7C7878">Phone</font></string>
+    <string name="password"><font size="32" color="#7C7878">Password</font></string>
+</resources>

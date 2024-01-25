@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SignUpActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/icon_width"
+        android:layout_height="@dimen/icon_height"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/newswathch"
+        android:scaleType="centerCrop"
+        />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_layout_input_filled"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/hint_username"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense"
+            app:startIconDrawable="@drawable/baseline_person_24"
+            android:textColorHint="@color/gray"
+            app:startIconTint="@color/blue"
+            app:boxBackgroundColor="@color/white"
+           >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                android:textSize="16sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/hint_email"
+            android:textColorHint="@color/gray"
+            android:layout_marginTop="15dp"
+            app:startIconTint="@color/blue"
+            app:startIconDrawable="@drawable/baseline_email_24"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:padding="0dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/hint_phone"
+            app:startIconDrawable="@drawable/baseline_call_24"
+            android:textColorHint="@color/gray"
+            app:counterMaxLength="10"
+            app:startIconTint="@color/blue"
+
+            android:layout_marginTop="15dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLength="10"
+                android:padding="0dp"
+                android:inputType="number"
+                android:textSize="16sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="@string/hint_password"
+            android:textColorHint="@color/gray"
+            app:startIconTint="@color/blue"
+            app:startIconDrawable="@drawable/baseline_lock_24"
+
+            android:layout_marginTop="15dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                android:padding="0dp"
+                android:textSize="16sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/iam_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="I am a"
+        android:textColor="@color/gray"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_input_filled" />
+    <RadioGroup
+
+        android:id="@+id/radio_groups"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iam_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal">
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio_pirates"
+            style="@style/Widget.App.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Media Reporter"
+            android:textColor="@color/black"
+            android:textSize="13sp"/>
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio_ninjas"
+            android:layout_width="wrap_content"
+            style="@style/Widget.App.RadioButton"
+            android:layout_height="wrap_content"
+            android:text="Visitor"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            />
+    </RadioGroup>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btn_signUp"
+        app:layout_constraintTop_toBottomOf="@id/radio_groups"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:background="@color/blue"
+        app:cardBackgroundColor="@color/blue"
+        app:cardCornerRadius="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toTopOf="@id/or_sign_in"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textColor="@color/white"
+
+            android:layout_gravity="center"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/or_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_signUp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp">
+        <View
+            android:layout_width="53dp"
+            android:layout_height="2dp"
+            android:background="@color/gray"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or sign in with"
+            android:layout_gravity="center"
+            android:textColor="@color/gray"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+        <View
+            android:layout_width="53dp"
+            android:layout_height="2dp"
+            android:background="@color/gray"
+            android:layout_gravity="center"/>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/apps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/or_sign_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/text_signup"
+
+        >
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/box_shape"
+            android:src="@drawable/envelope"
+            android:scaleType="centerCrop"
+            android:padding="7dp"
+            />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/box_shape"
+            android:src="@drawable/facebook"
+            android:scaleType="centerCrop"
+            android:padding="7dp"
+            android:layout_marginStart="15dp"
+            />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/box_shape"
+            android:src="@drawable/twitter_x"
+            android:scaleType="centerCrop"
+            android:padding="7dp"
+            android:layout_marginStart="15dp"
+            />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/box_shape"
+            android:src="@drawable/google"
+            android:scaleType="centerCrop"
+            android:padding="7dp"
+            android:layout_marginStart="15dp"
+            />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/box_shape"
+            android:src="@drawable/apple_icon"
+            android:scaleType="centerCrop"
+            android:padding="7dp"
+            android:layout_marginStart="15dp"
+            />
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/apps"
+      android:paddingTop="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/text_terms"
+        android:text="By Signing up to News24 you are accepting our"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_terms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_signup"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Terms &amp; Condintions"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

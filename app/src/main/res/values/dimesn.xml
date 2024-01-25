@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="icon_width">170dp</dimen>
+    <dimen name="icon_height">100dp</dimen>
+    <dimen name="tweleve_height">12dp</dimen>
+    <dimen name="fourteen_height">14dp</dimen>
+    <dimen name="sixteen_height">16dp</dimen>
+    <dimen name="eighteen_height">18dp</dimen>
+    <dimen name="twety_height">20dp</dimen>
+    <dimen name="dimen_fifty">55dp</dimen>
+
+</resources>

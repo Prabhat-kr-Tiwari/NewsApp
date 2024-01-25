@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/mHome"
+        android:title="Home"
+        android:icon="@drawable/baseline_home_filled_24"/>
+    <item android:id="@+id/mads"
+        android:title="Ads"
+        android:icon="@drawable/badge_ad"/>
+    <item android:id="@+id/mplaceholder"
+        android:title="Add Post"
+        />
+    <item android:id="@+id/mPoll"
+        android:title="Poll"
+        android:icon="@drawable/poll"/>
+    <item android:id="@+id/mProfile"
+        android:title="Profile"
+        android:icon="@drawable/baseline_person_24"/>
+</menu>
